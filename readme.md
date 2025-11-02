@@ -1,7 +1,7 @@
 ![alt text](image.png)
 # Nya2PtCl6 - 米游社AI机器人
 它是基于Selenium网页自动化+Minimind AI +Minimind-V 的米游社自动化机器人。
-目前包含回复功能
+目前包含回复功能,私信功能
 发帖功能已经屏蔽，可以自行在`begin.py`打开
 
 
@@ -43,6 +43,12 @@ StartTorchPython.cmd -m pip install -r req2.txt
 AnswerUtil7.cmd 启动ai模型
 Launch.cmd 启动网页自动化
 startImageVisionUtil.cmd 启动图像识别
+
+ - 私信功能
+请在手机模拟器上安装好米游社app并登录
+将手机模拟器的快捷方式改成`emulator.lnk`放到根目录下
+下载[`platform-tools`](https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn)解压到根目录下
+
 
 ## 开源协议
 Minimind和Minimind-V在MIT协议下开源，Nya2PtCl6在the Unlicense协议下开源。
