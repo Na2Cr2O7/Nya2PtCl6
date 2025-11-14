@@ -11,6 +11,8 @@
 账号（邮箱）
 密码
 ```
+ - 安装chrome
+ - 下载对应chrome版本的chromedriver到当前目录
  - 需要下载两个python环境
 `1`.[Python 3.11.8](https://www.python.org/ftp/python/3.11.8/python-3.11.8-amd64.exe)
 `2`.[WinPython 3.13](https://github.com/winpython/winpython/releases/download/17.2.20250920final/WinPython64-3.14.0.1dot.zip)
@@ -52,5 +54,6 @@ startImageVisionUtil.cmd 启动图像识别
 
 ## 开源协议
 Minimind和Minimind-V在MIT协议下开源，Nya2PtCl6在the Unlicense协议下开源。
+
 
     
