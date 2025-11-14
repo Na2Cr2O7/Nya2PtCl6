@@ -362,6 +362,7 @@ if BatteryStatus.restTime():
     #     import UploadLoginInfo
 ValU=['回复','发帖','发小说帖','关注','生活','@','发图片帖','ACG','视频','创作图片','酒馆','私信','获取图片']
 fpr:int=randint(0,len(ValU)-1)
+
 login=True
 if MONITORMODE:
     print('Monitor Mode started,no reply will be sent')
@@ -1352,12 +1353,12 @@ while True:
             wd.find_element(By.CSS_SELECTOR,'.mhy-input__container > input:nth-child(1)').send_keys(_title)
             failTries=0
             selectPartition()
-            wd.find_element(By.CSS_SELECTOR,'.mhy-button__button').click()
             wd.find_element(By.CSS_SELECTOR,'.icon-image').click()
-            CopyTest.uploadSth(os.path.abspath(imageLs[1]))
+            CopyTest.uploadSth(os.path.abspath(imageLs[0]))
             Sleep(30)
             wd.find_element(By.CSS_SELECTOR,'.mhy-button__button').click()
             Sleep(SLPTIME*2)
+            # wd.find_element(By.CSS_SELECTOR,'.mhy-button__button').click()
         except Exception as e:
             Status.setStatus(f"Failed to post image:{e}")
 

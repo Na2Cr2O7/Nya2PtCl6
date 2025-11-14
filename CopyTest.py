@@ -6,13 +6,20 @@ from random import randint
 import win32gui
 import win32con
 from time import sleep
+import os
 
 def uploadSth(path):
+    path=os.path.abspath(path)
     sleep(4)
-    try:
-        dg=win32gui.FindWindow(None,'File Upload')
-    except:
-        dg=win32gui.FindWindow(None,'文件上传')
+    possibleTitles=['打开','File Upload','文件上传']
+    dg=0
+    for title in possibleTitles:
+        print(title)
+        dg=win32gui.FindWindow(None,title)
+        if dg:
+            break
+    if not dg:
+        return
     comboboxEx32=win32gui.FindWindowEx(dg,0,'ComboBoxEx32',None)
     combobox=win32gui.FindWindowEx(comboboxEx32,0,'ComboBox',None)
     edit=win32gui.FindWindowEx(combobox,0,'Edit',None)
@@ -49,4 +56,4 @@ def getNetImage(filename='temp.jpg'):
     o.write(r)
     o.close()
 if __name__=='__main__':
-    copyImage(None)
+    uploadSth(['45ded64ece6bb8848142ea681ffc3a7e.webp.jpg'][0])
